@@ -19,10 +19,10 @@ govuk_elements:	govuk_elements_clean govuk_elements_get
 
 # https://github.com/alphagov/govuk_template
 govuk_template_clean:
-	-rm -rf application/templates/govuk_template
+	-./$(SELF_DIR)/scripts/govuk_template.sh clean
 
 govuk_template_get:
-	-./$(SELF_DIR)/scripts/govuk_template_get.sh
+	-./$(SELF_DIR)/scripts/govuk_template.sh get
 
 govuk_template:	govuk_template_clean govuk_template_get
 
