@@ -4,21 +4,14 @@
 - https://github.com/alphagov/govuk_elements
 - https://github.com/alphagov/govuk_frontend_toolkit
 
-
-# Example run
-
-## Before
-
-    $ find application
-    application
-    application/template
-    application/static
-
-## Run
+# Run
 
     make govuk_assets_all
 
-## After
 
-    $ find application
+After a successful run, these 3 directories are new:
+
+    application/template/govuk_template
+    application/static/govuk_elements
+    application/static/govuk_frontend_toolkit
 
