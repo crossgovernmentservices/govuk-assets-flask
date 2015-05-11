@@ -34,6 +34,35 @@ Re-run to get the latest assets.
 
 # Now what?
 
+* In your own ```layout.html```:
+
+    {% extends "govuk_template/views/layouts/govuk_template.html" %}
+
+```govuk_template.html``` defines the following blocks:
+
+- top_of_page
+- page_title
+- head
+- body_classes
+- body_start
+- cookie_message
+- header_class
+- inside_header
+- proposition_header
+- after_header
+- content
+- footer_top
+- footer_support_links
+- body_end
+
+E.g. inject your content with:
+
+```html
+{% block content %}
+  <p>My content</p>
+{% endblock %}
+```
+
 * Tell govuk_template where to find its assets by using the ```@app.context_processor``` decorator or if you're into factories:
 
 ```python
