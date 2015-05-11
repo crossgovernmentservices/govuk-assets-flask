@@ -7,7 +7,7 @@ ARG=$1
 
 TMP=$(mktemp -d -t xgs_govuk_template.XXXXXX)
 DEST_ZIP=${TMP}/govuk_template.zip
-DEST_VIEWS=application/template/govuk_template
+DEST_VIEWS=application/templates/govuk_template
 DEST_ASSETS=application/static/govuk_template
 
 if [ "$ARG" == "clean" ] ; then
@@ -32,6 +32,7 @@ else
   exit 1
 fi
 
-# find application/template/govuk_template -type f -exec md5sum {} \; | md5sum
+# find application/templates/govuk_template -type f -exec md5sum {} \; | md5sum
+# find application/static/govuk_template -type f -exec md5sum {} \; | md5sum
 
 rm -rf $TMP

@@ -4,7 +4,7 @@
 - https://github.com/alphagov/govuk_elements
 - https://github.com/alphagov/govuk_frontend_toolkit
 
-Assumes a Flask app with an application proper called ```application```, with the usual ```static``` and ```template``` directories inside it.
+Assumes a Flask app with an application proper called ```application```, with the usual ```static``` and ```templates``` directories inside it.
 
 See an example use-case at https://github.com/crossgovernmentservices/xgs_prototypes
 
