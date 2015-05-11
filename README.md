@@ -1,4 +1,4 @@
-# Easy import of GOV.UK assets
+# Easy import of GOV.UK assets using Make
 
 - https://github.com/alphagov/govuk_template
 - https://github.com/alphagov/govuk_elements
@@ -15,3 +15,4 @@ After a successful run, these 3 directories are new:
     application/static/govuk_elements
     application/static/govuk_frontend_toolkit
 
+Re-run to get the latest assets.
