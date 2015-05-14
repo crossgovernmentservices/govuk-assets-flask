@@ -2,18 +2,23 @@
 
 SELF_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
 
-govuk_assets_all:	govuk_frontend_toolkit_clone_or_pull govuk_elements govuk_template
+govuk_assets_all:	govuk_frontend_toolkit govuk_elements govuk_template
 
 # https://github.com/alphagov/govuk_frontend_toolkit
-govuk_frontend_toolkit_clone_or_pull:
-	-./$(SELF_DIR)/scripts/govuk_frontend_toolkit_clone_or_pull.sh
+govuk_frontend_toolkit_clean:
+	-./$(SELF_DIR)/scripts/govuk_frontend_toolkit.sh clean
+
+govuk_frontend_toolkit_get:
+	-./$(SELF_DIR)/scripts/govuk_frontend_toolkit.sh get
+
+govuk_frontend_toolkit: govuk_frontend_toolkit_clean govuk_frontend_toolkit_get
 
 # https://github.com/alphagov/govuk_elements
 govuk_elements_clean:
-	-rm -rf application/static/govuk_elements
+	-./$(SELF_DIR)scripts/govuk_elements.sh clean
 
 govuk_elements_get:
-	-./$(SELF_DIR)scripts/govuk_elements_get.sh
+	-./$(SELF_DIR)scripts/govuk_elements.sh get
 
 govuk_elements:	govuk_elements_clean govuk_elements_get
 
