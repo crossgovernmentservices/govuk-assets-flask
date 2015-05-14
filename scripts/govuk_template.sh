@@ -21,6 +21,7 @@ elif [ "$ARG" == "get" ] ; then
 
   # Prepare
   pushd $TMP/unzipped/govuk_template-master
+  bundle install
   bundle exec rake build:jinja
   popd
   mkdir -p $DEST_VIEWS
