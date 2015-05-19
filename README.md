@@ -32,6 +32,16 @@ After a successful run, these 4 directories are new:
 
 Re-run to get the latest assets.
 
+# What about Heroku?
+
+See this commit in the example app:
+
+https://github.com/crossgovernmentservices/xgs_prototypes/commit/bc88582b27e5e9b57d3c13ba2640c38edd60a06d
+
+...and make sure to use the 'multi' buildpack:
+
+    heroku config:set BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+
 # Now what?
 
 * In your own ```layout.html```:
