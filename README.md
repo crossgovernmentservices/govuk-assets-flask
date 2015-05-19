@@ -41,6 +41,10 @@ https://github.com/crossgovernmentservices/xgs_prototypes/commit/bc88582b27e5e9b
 ...and make sure to use the 'multi' buildpack:
 
     heroku config:set BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+    
+...and also tell Flask where it can find the Sass binary:
+
+     heroku config:set SASS_BIN=/app/vendor/ruby-2.0.0/bin/sass
 
 # Now what?
 
