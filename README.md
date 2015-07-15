@@ -8,7 +8,17 @@ Assumes a Flask app with an application proper called ```application```, with th
 
 # Use it in your Flask app
 
-See an example use-case at https://github.com/crossgovernmentservices/xgs_prototypes
+I recommend using RVM, renv, or similar. Copy [.ruby-version](.ruby-version) and [.ruby-gemset](.ruby-gemset) into the root of your Flask app, ```cd ..; cd -``` for it to take effect, then follow the steps below.
+
+## Just once
+
+
+    git clone  https://github.com/crossgovernmentservices/govuk-assets-flask.git scripts/govuk-assets-flask
+    make -f scripts/govuk-assets-flask/Makefile govuk_assets_all
+
+## Many times
+
+I.e. make it part of your development flow.
 
 Add this project as a submodule to your own. E.g. if you have a location ```scripts``` where you keep things like these:
 
@@ -18,7 +28,7 @@ Modify your existing Makefile to include this one, so add this line:
 
     include scripts/govuk-assets-flask/Makefile
 
-# Run
+Then run it:
 
     make govuk_assets_all
 
@@ -94,4 +104,3 @@ class AssetLocator(object):
 ```sass
 @import "../govuk_frontend_toolkit/stylesheets/colours"
 @import "../govuk_elements/public/sass/elements/reset";
-```
