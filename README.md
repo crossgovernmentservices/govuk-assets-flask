@@ -89,6 +89,8 @@ E.g. inject your content with:
 
 * Tell govuk_template where to find its assets by using the ```@app.context_processor``` decorator or if you're into factories:
 
+(copy/paste the below, or use [asset_locator.py](asset_locator.py).)
+
 ```python
 class AssetLocator(object):
 
