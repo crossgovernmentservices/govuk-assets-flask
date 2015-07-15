@@ -106,3 +106,11 @@ class AssetLocator(object):
 ```sass
 @import "../govuk_frontend_toolkit/stylesheets/colours"
 @import "../govuk_elements/public/sass/elements/reset";
+```
+
+# Example implementations
+
+* [People Service](https://github.com/crossgovernmentservices/people/commit/a478b1b1305d6bbc42d703468db96f200c26463b)
+* [Prototypes for Civil Service Tools](https://github.com/crossgovernmentservices/prototypes/blob/master/application/assets.py), with a dependency on [Flask-Assets](http://flask-assets.readthedocs.org/en/latest/)
+
+
