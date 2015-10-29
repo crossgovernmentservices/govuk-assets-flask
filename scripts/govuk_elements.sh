@@ -11,7 +11,7 @@ DEST=application/static/govuk_elements
 mkdir -p $DEST
 
 if [ "$ARG" == "clean" ] ; then
-  rm -rf $DEST 
+  rm -rf $DEST
 elif [ "$ARG" == "get" ] ; then
   # Get
   curl -L https://github.com/alphagov/govuk_elements/archive/master.zip -o $DEST_ZIP
@@ -21,7 +21,7 @@ elif [ "$ARG" == "get" ] ; then
 
   # Prepare
   for sassfile in $(find $DEST -name '*.scss'); do
-    sed -i '/^@import .*/d' $sassfile
+    sed -ie '/^@import .*/d' $sassfile
   done
 else
   echo "Unknown arg: $ARG"
