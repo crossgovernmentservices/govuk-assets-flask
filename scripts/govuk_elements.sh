@@ -18,11 +18,6 @@ elif [ "$ARG" == "get" ] ; then
   mkdir -p $TMP/unzipped
   unzip -q $DEST_ZIP -d $TMP/unzipped
   mv $TMP/unzipped/govuk_elements-master/* $DEST
-
-  # Prepare
-  for sassfile in $(find $DEST -name '*.scss'); do
-    sed -ie '/^@import .*/d' $sassfile
-  done
 else
   echo "Unknown arg: $ARG"
   exit 1
